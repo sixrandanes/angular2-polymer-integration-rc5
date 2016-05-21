@@ -4,6 +4,6 @@ export class PolyPage {
   }
 
   getParagraphText() {
-    return element(by.css('poly-app h1')).getText();
+    return element(by.css('poly-app .title')).getText();
   }
 }
