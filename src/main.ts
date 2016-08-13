@@ -1,10 +1,16 @@
 import { bootstrap } from '@angular/platform-browser-dynamic';
 import { enableProdMode } from '@angular/core';
-import { PolyAppComponent, environment } from './app/';
+import { disableDeprecatedForms, provideForms } from '@angular/forms';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { PolyAppComponent } from "./app/poly.component";
 
-if (environment.production) {
-  enableProdMode();
-}
 
-bootstrap(PolyAppComponent);
 
+
+enableProdMode();
+
+bootstrap( PolyAppComponent, [
+  {provide: LocationStrategy, useClass: HashLocationStrategy},
+  disableDeprecatedForms(),
+  provideForms(),
+]);

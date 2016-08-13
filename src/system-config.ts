@@ -3,13 +3,37 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
+  'moment': 'vendor/moment/moment.js',
+  'angular2-moment': 'vendor/angular2-moment',
   '@vaadin': 'vendor/@vaadin',
-  '@angular': 'vendor/@angular',
+  '@ngrx': 'vendor/@ngrx'
 };
 
 /** User packages configuration. */
 const packages: any = {
-  '@vaadin/angular2-polymer': { main: 'index.js', defaultExtension: 'js' }
+  'angular2-moment': { defaultExtension: 'js' },
+  '@vaadin/angular2-polymer': { main: 'index.js', defaultExtension: 'js' },
+  '@ngrx/store': {  format: 'cjs',
+    defaultExtension: 'js',
+    main: 'index.js'
+  },
+  '@ngrx/core': {  format: 'cjs',
+    defaultExtension: 'js',
+    main: 'index.js'
+  },
+  '@ngrx/store-devtools': {  format: 'cjs',
+    defaultExtension: 'js',
+    main: 'index.js'
+  },
+  '@ngrx/store-log-monitor': {  format: 'cjs',
+    defaultExtension: 'js',
+    main: 'index.js'
+  },
+  '@ngrx/effects': {  format: 'cjs',
+    defaultExtension: 'js',
+    main: 'index.js'
+  },
+  'bower_components': { defaultExtension: 'js' }
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -19,8 +43,10 @@ const packages: any = {
 const barrels: string[] = [
   // Angular specific barrels.
   '@angular/core',
+  '@angular/forms',
   '@angular/common',
   '@angular/compiler',
+  '@angular/forms',
   '@angular/http',
   '@angular/router',
   '@angular/platform-browser',

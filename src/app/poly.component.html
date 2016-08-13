@@ -4,4 +4,34 @@
     </div>
   </paper-toolbar>
   <div>My application content</div>
+
+
+  <form #form="ngForm"
+        (ngSubmit)="submit($event.value)"
+        [formGroup]="deviseForm">
+    <div>
+      <!-- code -->
+
+      <paper-input  id="code" formControlName="code" label="code" ngDefaultControl
+                   [invalid]="true"
+                   [errorMessage]="error"
+                   required maxlength="3" char-counter ></paper-input>
+
+
+      <!-- designation -->
+      <paper-input  id="designation" label="deisgnation"
+                   formControlName="designation" ngDefaultControl
+                   [invalid]="true"
+                   [errorMessage]="error"
+                   maxlength="50" char-counter>
+      </paper-input>
+
+
+    </div>
+  </form>
+
 </paper-scroll-header-panel>
+
+
+
+
