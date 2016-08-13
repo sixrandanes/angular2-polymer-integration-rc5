@@ -1,5 +1,6 @@
 import { NgModule }       from '@angular/core';
 import { ReactiveFormsModule }       from '@angular/forms';
+import { CommonModule }       from '@angular/common';
 import { BrowserModule  } from '@angular/platform-browser';
 import { PolymerElement } from '@vaadin/angular2-polymer';
 import { PolyAppComponent } from "./poly.component";
@@ -11,7 +12,7 @@ import { PolyAppComponent } from "./poly.component";
     PolymerElement('paper-toolbar'),
     PolymerElement('paper-input')
   ],
-  imports:      [BrowserModule, ReactiveFormsModule],
+  imports:      [BrowserModule, CommonModule, ReactiveFormsModule],
   bootstrap:    [PolyAppComponent],
 })
 export class AppModule {}
