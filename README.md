@@ -3,7 +3,7 @@
 Project that aims to reproduce the problem encountered within the new release of angular2 (angular2@rc5) 
 and the use of vaadin directive (vaadin/angular2-polymer)
 
-The property of paper-input seeems not to be recognized properly (whereas everything is working fine in angular2@rc4)
+The property of paper-input seeems not to be recognized properly (whereas everything works fine in angular2@rc4)
 
 >zone.js:461 Unhandled Promise rejection: Template parse errors:
 Can't bind to 'invalid' since it isn't a known property of 'paper-input'.
